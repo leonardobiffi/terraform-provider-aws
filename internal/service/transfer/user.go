@@ -360,6 +360,10 @@ func expandHomeDirectoryMappings(in []interface{}) []*transfer.HomeDirectoryMapE
 		mappings = append(mappings, m)
 	}
 
+	if len(mappings) == 0 {
+		return nil
+	}
+
 	return mappings
 }
 
